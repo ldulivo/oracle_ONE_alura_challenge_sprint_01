@@ -20,7 +20,7 @@ body {
 }
 
 .container {
-    display: flex;
+    display: table;
     flex-direction: column;
     position: relative;
     width: 100%;
@@ -28,6 +28,9 @@ body {
     background: #F3F5FC;
     max-width: 1440px;
     max-height: 1024px;
+
+    /* overflow: hidden; */
+    
 }
 
 /***********************************
@@ -38,6 +41,14 @@ body {
     position: relative;
     padding: 24px 0 24px 16px;
     height: 96px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container header > div {
+    width: 100%;
+    max-width: 688px;
 }
 
 /***********************************
@@ -232,6 +243,7 @@ footer {
     background: #0A3871;
     color: #FFFFFF;
     width: 100%;
+    max-width: 1440px;
 }
 
 footer section {
@@ -409,6 +421,11 @@ button:active::before {
       MIN-WIDTH: 768px
   ***********************************/
   @media (min-width: 768px) {
+    .container header {
+        position: relative;
+        padding: 76px 0 0 40px;
+    }
+
     .main--buttons .buttons {
         display: flex;
         flex-direction: row;
@@ -427,6 +444,7 @@ button:active::before {
   ***********************************/
   @media (min-width: 1440px) {
     .container {
+        display: flex;
         flex-direction: row;
         justify-content: flex-start;
         min-height: 1024px;
@@ -457,6 +475,13 @@ button:active::before {
         position: relative;
         max-height: 770px;
         overflow: hidden;
+    }
+
+    .areaClearX-active {
+        display: block !important;
+        top: 95px;
+        left: 900px;
+        position: fixed;
     }
 
     .main--text-transforms {
