@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+    <!-- Container-->
+    <div class="container">
+
+        <!-- Header-->
+        <header>
+            <!-- Logo -->
+            <img src="./assets/svg/Logo.svg" alt="logo alura" srcset="">
+        </header>
+
+        <!-- Main -->
+        <main>
+            <!-- Text input -->
+            <section class="main--text-input">
+                <textarea
+                    id="text"
+                    autofocus
+                    onkeyup="heightArea()"
+                    placeholder="Ingrese el texto aqui"
+                ></textarea>
+                <img 
+                    src="./assets/svg/x-circle-fill.svg"
+                    alt="clear"
+                    id="areaClearX"
+                    class="areaClearX"
+                    onclick="areaClear()"
+                >
+            </section>
+
+            <!-- Buttons -->
+            <section class="main--buttons">
+                <div class="alert">
+                    <img src="./assets/svg/Caution.svg" alt="caution" srcset="">
+                    <p>Solo letras minúsculas y sin acentos</p>
+                </div>
+
+                <div class="buttons">
+                    <button class="encriptar" id="encriptar" onclick="encriptar()">
+                        <img src="./assets/svg/lock-fill.svg" alt="lock" class="img">
+                        Encriptar
+                    </button>
+                    <button class="desencriptar" id="desencriptar" onclick="desencriptar()">
+                        <img src="./assets/svg/unlock-fill.svg" alt="unlock" class="img">
+                        Desencriptar
+                    </button>
+                </div>
+            </section>
+
+            <!-- Text transforms -->
+            <section class="main--text-transforms">
+                <div class="emptymessage" id="emptymessage">
+                    <img src="./assets/svg/Muneco.svg" alt="" srcset="">
+    
+                    <span>
+                        Ningún mensaje fue encontrado
+                    </span>
+    
+                    <p>
+                        Ingresa el texto que desees encriptar o desencriptar.
+                    </p>
+                </div>
+    
+                <div class="main--text-transforms-area" id="texttransform_area">
+                    <div class="texttransform" id="texttransform"></div>
+                    <button onclick="clipboardRun()">
+                        <img src="./assets/svg/files.svg" alt="clipboard" class="img">
+                        Copiar
+                    </button>
+                    <img 
+                        src="./assets/svg/x-circle-fill.svg"
+                        alt=""
+                        class="closeX"
+                        onclick="closeX()"
+                    >
+                </div>
+            </section>
+        </main>
+
+        <div class="warning" id="warning" onclick="closeWarning()">
+            <p>
+                <img src="./assets/svg/exclamation-circle-fill.svg" alt="warning">
+                El texto ingresado debe ser solo en minúsculas y sin acentos.
+            </p>
+        </div>
+        
+    </div>
+    <!-- /END/ Container-->
+
+    <footer>
+        <section>
+            <a href="https://github.com/ldulivo" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/svg/github.svg" alt="github" srcset="">
+            </a>
+            <a href="https://www.linkedin.com/in/ldulivo/" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/svg/linkedin.svg" alt="github" srcset="">
+            </a>
+        </section>
+
+        <p>Leonardo Ariel D'Ulivo</p>
+    </footer>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
